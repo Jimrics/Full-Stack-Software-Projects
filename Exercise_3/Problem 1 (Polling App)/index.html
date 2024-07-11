@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Polling System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        /* Additional styles for tables */
+        .user-tables {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Welcome to the Election Polling System</h1>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="images\go_vote.jpg" alt="There is supposed to be an image of the Go Vote slogan here">
+        </div>
+        <div class="swiper-slide">
+            <img src="images\right_to_vote.jpg" alt="image of right to vote is supposed to appear here">
+        </div>
+    </div>
+    <!-- Add pagination here -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<h3> Please Login First to vote </h3>
+
+<!-- Student Login Form -->
+<form id="studentLoginForm">
+    <h2>Student Login</h2>
+    <label for="studentID">Student ID:</label>
+    <input type="text" id="studentID" name="studentID" required>
+    <br>
+    <label for="studentPassword">Password:</label>
+    <input type="password" id="studentPassword" name="studentPassword" required>
+    <br>
+    <button type="submit" onclick="authentication(event)">Login</button>
+</form>
+
+<!-- Admin Login Form -->
+<form id="adminLoginForm">
+    <h2>Admin Login</h2>
+    <label for="adminUsername">Username:</label>
+    <input type="text" id="adminUsername" name="adminUsername" required>
+    <br>
+    <label for="adminPassword">Password:</label>
+    <input type="password" id="adminPassword" name="adminPassword" required>
+    <br>
+    <button type="button" onclick="adminpage()">Login</button>
+</form>
+
+<!-- User Tables -->
+<div class="user-tables">
+    <table>
+        <caption>Student Accounts(Each student can login only once to vote)</caption>
+        <tr>
+            <th>Username</th>
+            <th>Password</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>10</td>
+        </tr>
+    </table>
+    <table>
+        <caption>Admin Account</caption>
+        <tr>
+            <th>Username</th>
+            <th>Password</th>
+        </tr>
+        <tr>
+            <td>userone</td>
+            <td>userone</td>
+        </tr>
+    </table>
+</div>
+
+<script src="index.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        autoplay: {
+            delay: 4000, // milliseconds
+        },
+        // If you want pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+</script>
+
+</body>
+</html>

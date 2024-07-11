@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="poll-container">
+        <p class="poll-welcome">Welcome to the polling page</p>
+        <p class="poll-instructions">Please select who you want to vote</p>
+        <form id="poll">
+            <button type="button" id="candidate1" onclick="vote_message('candidate1')">Candidate 1 @</button>
+            <button type="button" id="candidate2" onclick="vote_message('candidate2')">Candidate 2 ()</button>
+            <button type="button" id="candidate3" onclick="vote_message('candidate3')">Candidate 3 !</button>
+            <button type="button" id="candidate4" onclick="vote_message('candidate4')">Candidate 4 *</button>
+            <button type="button" id="candidate5" onclick="vote_message('candidate5')">Candidate 5 &</button>
+            <button type="button" id="candidate6" onclick="vote_message('candidate6')">Candidate 6 ^</button>
+            <button type="button" id="candidate7" onclick="vote_message('candidate7')">Candidate 7 %</button>
+            <button type="button" id="candidate8" onclick="vote_message('candidate8')">Candidate 8 $</button>
+            <button type="button" id="candidate9" onclick="vote_message('candidate9')">Candidate 9 #</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
